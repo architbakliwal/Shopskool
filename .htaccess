@@ -58,5 +58,6 @@ RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
  order deny,allow
  deny from all
  allow from 111.119.194.18
+ allow from 43.242.226.85
 </Limit>
 
