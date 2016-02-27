@@ -98,6 +98,9 @@
 				<div class="compare"><button type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><span><?php echo $button_compare; ?></span></button></div>
 			  </div>
 			</div>
+      <div class="size-chart-div">
+        <a id="size-chart" href="image/catalog/Nkbps-Half-Full-Shirt.jpg">Size Chart</a>
+      </div>
 				<?php if ($options) { ?>
             <h3><?php echo $text_option; ?></h3>
             <?php foreach ($options as $option) { ?>
@@ -580,5 +583,7 @@ $(document).ready(function() {
 		}
 	});
 });
+
+$("#size-chart").fancybox({});
 //--></script>
 <?php echo $footer; ?>

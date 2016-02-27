@@ -46,7 +46,11 @@ type="text/javascript"></script>
 <script src="catalog/view/javascript/opentheme/ocslideshow/jquery.nivo.slider.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/tt_dilima1/stylesheet/opentheme/ocquickview/css/ocquickview.css">
-<script src="catalog/view/javascript/opentheme/ocquickview/ocquickview.js" type="text/javascript"></script> 
+<script src="catalog/view/javascript/opentheme/ocquickview/ocquickview.js" type="text/javascript"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="catalog/view/javascript/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery.fancybox.css?v=2.1.5" media="screen" />
+
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>

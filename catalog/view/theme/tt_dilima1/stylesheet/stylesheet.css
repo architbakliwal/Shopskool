@@ -4042,6 +4042,12 @@ button:hover {
     margin: 0;
 }
 
+.size-chart-div a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #F06262;
+}
+
 .product-view .input-content {
     float: left;
     margin-right: 10px;

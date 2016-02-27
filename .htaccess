@@ -55,9 +55,10 @@ RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 
 # ALLOW USER BY IP
 <Limit GET POST>
- order deny,allow
- deny from all
- allow from 111.119.194.18
- allow from 43.242.226.85
+# order deny,allow
+# deny from all
+# allow from 111.119.194.18
+# allow from 103.14.234.54
+# allow from 125.99.126.134
 </Limit>
 
