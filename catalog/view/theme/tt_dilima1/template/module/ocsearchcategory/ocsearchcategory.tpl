@@ -5,8 +5,9 @@
             <p><span class="cate-selected" data-value="0" style="line-height:45px;"><?php echo $text_category; ?></span><i class="fa fa-caret-down"></i></p>
 
             <ul class="cate-items">
-                <li class="item-cate" data-value="0"><?php echo $text_category; ?></li>
+                <li class="item-cate" data-value="0">All</li>
                 <?php foreach ($categories as $category_1) { ?>
+                <?php if($category_1['category_id'] != 263) {?>
                 <?php if ($category_1['category_id'] == $category_id) { ?>
                 <li data-value="<?php echo $category_1['category_id']; ?>" class="selected item-cate" ><?php echo $category_1['name']; ?></li>
                 <?php } else { ?>
@@ -23,6 +24,7 @@
                 <li data-value="<?php echo $category_3['category_id']; ?>" class="selected item-cate f2"><?php echo $category_3['name']; ?></li>
                 <?php } else { ?>
                 <li data-value="<?php echo $category_3['category_id']; ?>" class="item-cate f2"><?php echo $category_3['name']; ?></li>
+                <?php } ?>
                 <?php } ?>
                 <?php } ?>
                 <?php } ?>

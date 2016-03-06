@@ -98,9 +98,22 @@
 				<div class="compare"><button type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><span><?php echo $button_compare; ?></span></button></div>
 			  </div>
 			</div>
-      <div class="size-chart-div">
-        <a id="size-chart" href="image/catalog/Nkbps-Half-Full-Shirt.jpg">Size Chart</a>
-      </div>
+      <?php
+        foreach ($attribute_groups as $attribute_group) { 
+          if($attribute_group['name'] == "Size Charts") {
+            foreach ($attribute_group['attribute'] as $attribute) {
+              if($attribute['name'] == 'Size Chart') {
+                $sizechartimage = $attribute['text']
+      ?>
+                <div class="size-chart-div">
+                  <a id="size-chart" href="image/catalog/<?php echo $sizechartimage; ?>">Size Chart</a>
+                </div>
+      <?php       
+              }
+            }
+          }
+        }
+      ?>
 				<?php if ($options) { ?>
             <h3><?php echo $text_option; ?></h3>
             <?php foreach ($options as $option) { ?>
@@ -272,7 +285,7 @@
 	  <div class="tab-view">
 			<ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
-            <?php if ($attribute_groups) { ?>
+            <?php if ($attribute_groups && false) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <?php } ?>
             <?php if ($review_status) { ?>
@@ -281,7 +294,7 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
-            <?php if ($attribute_groups) { ?>
+            <?php if ($attribute_groups && false) { ?>
             <div class="tab-pane" id="tab-specification">
               <table class="table table-bordered">
                 <?php foreach ($attribute_groups as $attribute_group) { ?>

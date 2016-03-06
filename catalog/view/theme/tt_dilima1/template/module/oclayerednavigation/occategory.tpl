@@ -1,10 +1,10 @@
 <?php echo $header; ?>
 <div class="container layer-category">
-	<ul class="breadcrumb">
+	<!-- <ul class="breadcrumb">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 		<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
 		<?php } ?>
-	</ul>
+	</ul> -->
     <div class="layered-navigation-block"></div>
     <div class="ajax-loader">
         <img src="<?php echo $oclayerednavigation_loader_img; ?>" alt="" />
@@ -18,7 +18,7 @@
         <?php $class = 'col-sm-12'; ?>
         <?php } ?>
         <div id="content" class="<?php echo $class; ?>">
-			<div class="category-title"><h2><?php echo $heading_title; ?></h2></div>
+			<!-- <div class="category-title"><h2><?php echo $heading_title; ?></h2></div>
 			<?php if ($thumb || $description) { ?>
 			<div class="category-image">
 				<?php if ($thumb) { ?>
@@ -28,11 +28,11 @@
 			   <?php echo $description; ?>
 				<?php } ?>
 			</div>
-			<?php } ?>
+			<?php } ?> -->
 			<?php echo $content_top; ?>
             <div class="custom-category">
                 <?php if ($products) { ?>
-                <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
+                <!-- <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p> -->
                 <div class="product-filter">
 					<div class="btn-group">
 						<button type="button" id="list-view" class="btn btn-default" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>

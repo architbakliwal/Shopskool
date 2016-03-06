@@ -1,3 +1,4 @@
+<div class="col-md-9 col-sm-12 col-sms-12">
 <div class="banner7">
 <div class= "oc-banner7-container">
 	<div class="flexslider oc-nivoslider">
@@ -26,15 +27,21 @@
 								<div class="banner7-small_image">
 									<img src="<?php echo $s['small_image']; ?>" alt="" title="small" />
 								</div>
+								<?php if( $s['title'] ) { ?>
 								<div class="banner7-title">
 									<h3><?php echo $s['title']; ?></h3>
 								</div>
+								<?php } ?>
+								<?php if( $s['sub_title'] ) { ?>
 								<div class="sub-title">
 									<h3><?php echo $s['sub_title']; ?></h3>
 								</div>
+								<?php } ?>
+								<?php if( $s['description'] ) { ?>
 								<div class="banner7-des">
 									<?php echo $s['description']; ?>
 								</div>
+								<?php } ?>
 								<?php if( $s['link'] ) { ?>
 									<div class="banner7-readmore">
 										<a href="<?php echo $s['link']?>" title="<?php echo 'Read more' ?>"><?php echo 'Read more'; ?></a>	
@@ -90,5 +97,6 @@
 			
 		</script>
 	</div>
+</div>
 </div>
 </div>
