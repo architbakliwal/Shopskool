@@ -281,8 +281,11 @@
       <?php } ?>
       <?php } ?>
     </fieldset>
+
+    <?php echo $captcha; ?>
   </div>
 </div>
+
 <div class="checkbox">
   <label for="newsletter">
     <input type="checkbox" name="newsletter" value="1" id="newsletter" />
@@ -320,6 +323,10 @@ $('#account .form-group[data-sort]').detach().each(function() {
 		$('#account .form-group:last').after(this);
 	}
 
+	if ($(this).attr('data-sort') == $('#account .form-group').length) {
+		$('#account .form-group:last').after(this);
+	}
+
 	if ($(this).attr('data-sort') < -$('#account .form-group').length) {
 		$('#account .form-group:first').before(this);
 	}
@@ -331,6 +338,10 @@ $('#address .form-group[data-sort]').detach().each(function() {
 	}
 
 	if ($(this).attr('data-sort') > $('#address .form-group').length) {
+		$('#address .form-group:last').after(this);
+	}
+
+	if ($(this).attr('data-sort') == $('#address .form-group').length) {
 		$('#address .form-group:last').after(this);
 	}
 
@@ -407,7 +418,7 @@ $('#collapse-payment-address button[id^=\'button-payment-custom-field\']').on('c
 					if (json['success']) {
 						alert(json['success']);
 
-						$(node).parent().find('input[name^=\'custom_field\']').attr('value', json['code']);
+						$(node).parent().find('input[name^=\'custom_field\']').val(json['code']);
 					}
 				},
 				error: function(xhr, ajaxOptions, thrownError) {
@@ -445,9 +456,9 @@ $('#collapse-payment-address select[name=\'country_id\']').on('change', function
 		},
 		success: function(json) {
 			if (json['postcode_required'] == '1') {
-				$('#collapse-payment-address input[name=\'postcode\']').parent().parent().addClass('required');
+				$('#collapse-payment-address input[name=\'postcode\']').parent().addClass('required');
 			} else {
-				$('#collapse-payment-address input[name=\'postcode\']').parent().parent().removeClass('required');
+				$('#collapse-payment-address input[name=\'postcode\']').parent().removeClass('required');
 			}
 
 			html = '<option value=""><?php echo $text_select; ?></option>';

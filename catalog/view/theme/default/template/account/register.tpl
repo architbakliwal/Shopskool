@@ -505,6 +505,7 @@
             </div>
           </div>
         </fieldset>
+        <?php echo $captcha; ?>
         <?php if ($text_agree) { ?>
         <div class="buttons">
           <div class="pull-right"><?php echo $text_agree; ?>
@@ -539,6 +540,10 @@ $('#account .form-group[data-sort]').detach().each(function() {
 		$('#account .form-group:last').after(this);
 	}
 
+	if ($(this).attr('data-sort') == $('#account .form-group').length) {
+		$('#account .form-group:last').after(this);
+	}
+
 	if ($(this).attr('data-sort') < -$('#account .form-group').length) {
 		$('#account .form-group:first').before(this);
 	}
@@ -550,6 +555,10 @@ $('#address .form-group[data-sort]').detach().each(function() {
 	}
 
 	if ($(this).attr('data-sort') > $('#address .form-group').length) {
+		$('#address .form-group:last').after(this);
+	}
+
+	if ($(this).attr('data-sort') == $('#address .form-group').length) {
 		$('#address .form-group:last').after(this);
 	}
 
@@ -628,7 +637,7 @@ $('button[id^=\'button-custom-field\']').on('click', function() {
 					if (json['success']) {
 						alert(json['success']);
 
-						$(node).parent().find('input').attr('value', json['code']);
+						$(node).parent().find('input').val(json['code']);
 					}
 				},
 				error: function(xhr, ajaxOptions, thrownError) {
