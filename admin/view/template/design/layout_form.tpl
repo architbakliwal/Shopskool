@@ -109,96 +109,6 @@
                     <?php } else { ?>
                     <option value="content_top"><?php echo $text_content_top; ?></option>
                     <?php } ?>
-					<?php if ($layout_module['position'] == 'content_block') { ?>
-                    <option value="content_block" selected="selected"><?php echo $text_content_block; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block"><?php echo $text_content_block; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block1') { ?>
-                    <option value="content_block1" selected="selected"><?php echo $text_content_block1; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block1"><?php echo $text_content_block1; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block2') { ?>
-                    <option value="content_block2" selected="selected"><?php echo $text_content_block2; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block2"><?php echo $text_content_block2; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block3') { ?>
-                    <option value="content_block3" selected="selected"><?php echo $text_content_block3; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block3"><?php echo $text_content_block3; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block4') { ?>
-                    <option value="content_block4" selected="selected"><?php echo $text_content_block4; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block4"><?php echo $text_content_block4; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block5') { ?>
-                    <option value="content_block5" selected="selected"><?php echo $text_content_block5; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block5"><?php echo $text_content_block5; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block6') { ?>
-                    <option value="content_block6" selected="selected"><?php echo $text_content_block6; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block6"><?php echo $text_content_block6; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block7') { ?>
-                    <option value="content_block7" selected="selected"><?php echo $text_content_block7; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block7"><?php echo $text_content_block7; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block8') { ?>
-                    <option value="content_block8" selected="selected"><?php echo $text_content_block8; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block8"><?php echo $text_content_block8; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block9') { ?>
-                    <option value="content_block9" selected="selected"><?php echo $text_content_block9; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block9"><?php echo $text_content_block9; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_block10') { ?>
-                    <option value="content_block10" selected="selected"><?php echo $text_content_block10; ?></option>
-                    <?php } else { ?>
-                    <option value="content_block10"><?php echo $text_content_block10; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_right') { ?>
-                    <option value="content_right" selected="selected"><?php echo $text_content_right; ?></option>
-                    <?php } else { ?>
-                    <option value="content_right"><?php echo $text_content_right; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'content_banner') { ?>
-                    <option value="content_banner" selected="selected"><?php echo $text_content_banner; ?></option>
-                    <?php } else { ?>
-                    <option value="content_banner"><?php echo $text_content_banner; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'top_banner') { ?>
-                    <option value="top_banner" selected="selected"><?php echo $text_top_banner; ?></option>
-                    <?php } else { ?>
-                    <option value="top_banner"><?php echo $text_top_banner; ?></option>
-                    <?php } ?>
-					
-					<?php if ($layout_module['position'] == 'top_banner1') { ?>
-                    <option value="top_banner1" selected="selected"><?php echo $text_top_banner1; ?></option>
-                    <?php } else { ?>
-                    <option value="top_banner1"><?php echo $text_top_banner1; ?></option>
-                    <?php } ?>
-					
                     <?php if ($layout_module['position'] == 'content_bottom') { ?>
                     <option value="content_bottom" selected="selected"><?php echo $text_content_bottom; ?></option>
                     <?php } else { ?>
@@ -271,21 +181,6 @@ function addModule() {
     html += '  </select></td>'; 
 	html += '  <td class="text-left"><select name="layout_module[' + module_row + '][position]" class="form-control">';
     html += '    <option value="content_top"><?php echo $text_content_top; ?></option>';
-	html += '    <option value="content_block"><?php echo $text_content_block; ?></option>';
-	html += '    <option value="content_block1"><?php echo $text_content_block1; ?></option>';
-	html += '    <option value="content_block2"><?php echo $text_content_block2; ?></option>';
-	html += '    <option value="content_block3"><?php echo $text_content_block3; ?></option>';
-	html += '    <option value="content_block4"><?php echo $text_content_block4; ?></option>';
-	html += '    <option value="content_block5"><?php echo $text_content_block5; ?></option>';
-	html += '    <option value="content_block6"><?php echo $text_content_block6; ?></option>';
-	html += '    <option value="content_block7"><?php echo $text_content_block7; ?></option>';
-	html += '    <option value="content_block8"><?php echo $text_content_block8; ?></option>';
-	html += '    <option value="content_block9"><?php echo $text_content_block9; ?></option>';
-	html += '    <option value="content_block10"><?php echo $text_content_block10; ?></option>';
-	html += '    <option value="content_banner"><?php echo $text_content_banner; ?></option>';
-	html += '    <option value="top_banner"><?php echo $text_top_banner; ?></option>';
-	html += '    <option value="top_banner1"><?php echo $text_top_banner1; ?></option>';
-	html += '    <option value="content_right"><?php echo $text_content_right; ?></option>';
     html += '    <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';
     html += '    <option value="column_left"><?php echo $text_column_left; ?></option>';
     html += '    <option value="column_right"><?php echo $text_column_right; ?></option>';

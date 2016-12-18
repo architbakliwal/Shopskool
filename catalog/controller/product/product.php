@@ -242,8 +242,7 @@ class ControllerProductProduct extends Controller {
 			$data['text_tags'] = $this->language->get('text_tags');
 			$data['text_related'] = $this->language->get('text_related');
 			$data['text_loading'] = $this->language->get('text_loading');
-			$data['shortdescription']  = utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, 600) . '...';
-			
+
 			$data['entry_qty'] = $this->language->get('entry_qty');
 			$data['entry_name'] = $this->language->get('entry_name');
 			$data['entry_review'] = $this->language->get('entry_review');
