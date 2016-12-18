@@ -2,7 +2,6 @@
 class ControllerCommonContentBottom extends Controller {
 	public function index() {
 		$this->load->model('design/layout');
-		$this->load->model('extension/module');
 
 		if (isset($this->request->get['route'])) {
 			$route = (string)$this->request->get['route'];

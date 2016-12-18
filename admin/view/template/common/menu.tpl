@@ -4,7 +4,6 @@
     <ul>
       <li><a href="<?php echo $category; ?>"><?php echo $text_category; ?></a></li>
       <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
-      <li><a href="<?php echo $testimonial; ?>"><?php echo $text_testimonial; ?></a></li>
       <li><a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></li>
       <li><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
       <li><a class="parent"><?php echo $text_attribute; ?></a>
@@ -29,6 +28,7 @@
       <li><a href="<?php echo $payment; ?>"><?php echo $text_payment; ?></a></li>
       <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
       <li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>
+      <li><a href="<?php echo $fraud; ?>"><?php echo $text_fraud; ?></a></li>
       <?php if ($openbay_show_menu == 1) { ?>
       <li><a class="parent"><?php echo $text_openbay_extension; ?></a>
         <ul>
@@ -60,6 +60,15 @@
               <li><a href="<?php echo $openbay_link_amazonus; ?>"><?php echo $text_openbay_dashboard; ?></a></li>
               <li><a href="<?php echo $openbay_link_amazonus_settings; ?>"><?php echo $text_openbay_settings; ?></a></li>
               <li><a href="<?php echo $openbay_link_amazonus_links; ?>"><?php echo $text_openbay_links; ?></a></li>
+            </ul>
+          </li>
+          <?php } ?>
+          <?php if ($openbay_markets['etsy'] == 1) { ?>
+          <li><a class="parent"><?php echo $text_openbay_etsy; ?></a>
+            <ul>
+              <li><a href="<?php echo $openbay_link_etsy; ?>"><?php echo $text_openbay_dashboard; ?></a></li>
+              <li><a href="<?php echo $openbay_link_etsy_settings; ?>"><?php echo $text_openbay_settings; ?></a></li>
+              <li><a href="<?php echo $openbay_link_etsy_links; ?>"><?php echo $text_openbay_links; ?></a></li>
             </ul>
           </li>
           <?php } ?>
@@ -183,8 +192,8 @@
       <li><a class="parent"><?php echo $text_marketing; ?></a>
         <ul>
           <li><a href="<?php echo $report_marketing; ?>"><?php echo $text_marketing; ?></a></li>
-          <li><a href="<?php echo $report_affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
-          <li><a href="<?php echo $report_affiliate_activity; ?>"><?php echo $text_affiliate_activity; ?></a></li>
+          <li><a href="<?php echo $report_affiliate; ?>"><?php echo $text_report_affiliate; ?></a></li>
+          <li><a href="<?php echo $report_affiliate_activity; ?>"><?php echo $text_report_affiliate_activity; ?></a></li>
         </ul>
       </li>
     </ul>

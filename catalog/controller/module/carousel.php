@@ -5,11 +5,10 @@ class ControllerModuleCarousel extends Controller {
 
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
-		
+
 		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
 		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
-		$this->load->language('module/carousel');
-		$data['title_brand'] = $this->language->get('title_brand');
+
 		$data['banners'] = array();
 
 		$results = $this->model_design_banner->getBanner($setting['banner_id']);

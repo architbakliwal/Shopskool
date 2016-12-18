@@ -21,28 +21,8 @@ class ControllerCommonColumnRight extends Controller {
 
 		if ($route == 'product/product' && isset($this->request->get['product_id'])) {
 			$this->load->model('catalog/product');
-			$this->load->language('product/product');
 
 			$layout_id = $this->model_catalog_product->getProductLayoutId($this->request->get['product_id']);
-			
-			$product_id = $this->request->get['product_id'];
-			
-			$product_info = $this->model_catalog_product->getProduct($product_id);
-			
-			$data['text_tags'] = $this->language->get('text_tags');
-			
-			$data['tags'] = array();
-
-			if ($product_info['tag']) {
-				$tags = explode(',', $product_info['tag']);
-
-				foreach ($tags as $tag) {
-					$data['tags'][] = array(
-						'tag'  => trim($tag),
-						'href' => $this->url->link('product/search', 'tag=' . trim($tag))
-					);
-				}
-			}
 		}
 
 		if ($route == 'information/information' && isset($this->request->get['information_id'])) {
@@ -80,7 +60,7 @@ class ControllerCommonColumnRight extends Controller {
 				}
 			}
 		}
-		
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/column_right.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/common/column_right.tpl', $data);
 		} else {

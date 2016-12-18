@@ -29,7 +29,7 @@ class ControllerModuleCategory extends Controller {
 
 		$data['categories'] = array();
 
-		$categories = $this->model_catalog_category->getCategories(263);
+		$categories = $this->model_catalog_category->getCategories(0);
 
 		foreach ($categories as $category) {
 			$children_data = array();
@@ -42,7 +42,6 @@ class ControllerModuleCategory extends Controller {
 
 					$children_data[] = array(
 						'category_id' => $child['category_id'],
-						'image' => "image/".$child['image'],
 						'name' => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 						'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
@@ -56,7 +55,6 @@ class ControllerModuleCategory extends Controller {
 
 			$data['categories'][] = array(
 				'category_id' => $category['category_id'],
-				'image'		  => "image/".$category['image'],
 				'name'        => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 				'children'    => $children_data,
 				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
